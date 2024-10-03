@@ -2,18 +2,19 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import logo from '../../../public/asset 0.png'
 import { IoMenuSharp } from "react-icons/io5";
 import { RxCross1 } from "react-icons/rx";
 
 export default function Header() {
 
   
-  function handleMenu(){
-  let save:any = document.getElementById('dil')
-  save.classList.toggle('hidden')
-   
+  function handleMenu() {
+    const save: HTMLElement | null = document.getElementById('dil');
+    if (save) {
+      save.classList.toggle('hidden');
+    }
   }
+  
 
   return (
     <header>
